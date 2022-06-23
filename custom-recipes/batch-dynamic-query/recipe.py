@@ -95,13 +95,12 @@ executor = SQLExecutor2(connection=sqlconn)
 
 # Create dictionary for find/replace
 replace_list = [[replace_col_1, replace_val_1],[replace_col_2,replace_val_2],[replace_col_3,replace_val_3],[replace_col_4, replace_val_4],[replace_col_5,replace_val_5],[replace_col_6,replace_val_6],[replace_col_7, replace_val_7],[replace_col_8,replace_val_8],[replace_col_9,replace_val_9],[replace_col_10, replace_val_10]]
-print(replace_list)
+
 # Remove list if empty
 replace_list = [i for i in replace_list if None not in i]
+print(replace_list)
 
 num_replacements=len(replace_list)
-print("NUMBER IS")
-print(num_replacements)
 if num_replacements == 0:
     raise Exception("The number of join keys must be the same for the first and the second datasets")
 
